@@ -1,0 +1,24 @@
+"dependencies": {
+    "express": "^4.21.0"
+  }
+  
+Version:- of express here is:
+^4.18.2
+
+1st part -> 4
+2nd part -> 18
+3rd part -> 2
+
+the 3rd part (Last Part) - Minor fixes (Optional Update)
+
+the 2nd part - Recommended bug fixes (Security fix)
+
+the 1st part - Major Release (Major / Breaking Update)
+
+^version - ^4.18.2 - ^Compatible with version
+
+here the version is 4. 4 is imp, does not matter whether the bug fix is 20 or 21 or minor fix is 4 or 5.
+
+the version must be "4" - if the version is updated to 5 then the code will break.
+
+^ - Install all recommended and minor fixes automatically
