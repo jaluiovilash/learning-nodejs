@@ -8,25 +8,29 @@ const users = require('./MOCK_DATA.json');
 // Middleware - it is like a plugin
 app.use(express.urlencoded({ extended: false }));
 
-app.use((req, res, next) => {
-    console.log("Hello i am m1");
-    // return res.json({ msg: 'Hello i am m1' });
-    fs.appendFile('log.txt', `\n${Date.now()}:${req.method}: ${req.ip}: ${req.path}`, (err, data) => {
-        next();
-    })
-    // req.myUserName = "Ovilash";
-});
+// app.use((req, res, next) => {
+//     console.log("Hello i am m1");
+//     // return res.json({ msg: 'Hello i am m1' });
+//     fs.appendFile('log.txt', `\n${Date.now()}:${req.method}: ${req.ip}: ${req.path}`, (err, data) => {
+//         next();
+//     })
+//     // req.myUserName = "Ovilash";
+// });
 
-app.use((req, res, next) => {
-    console.log("Hello i am m2", req.myUserName);
-    return res.json({ msg: 'Hello i am m2' });
-    // next();
-});
+// app.use((req, res, next) => {
+//     console.log("Hello i am m2", req.myUserName);
+//     return res.json({ msg: 'Hello i am m2' });
+//     // next();
+// });
+
 
 // ROUTES
 //REST API POINT
 // 1 - gives the list of the data
 app.get("/api/users", (req, res) => {
+    console.log(req.headers);
+    res.setHeader("X-MyName", "Ovilash"); //Custome headers
+    // Always add X to custom headers
     return res.json(users);
 });
 
