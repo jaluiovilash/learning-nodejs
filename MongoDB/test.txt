@@ -1,0 +1,3 @@
+Schema - deine the structure
+    schema - model
+    useing model we do CRUD operation
